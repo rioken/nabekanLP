@@ -1,0 +1,561 @@
+@charset "UTF-8";
+@media screen and (maX-width:640px) {
+
+body {
+font-size: 0.9rem;
+color: #383e45;
+}
+
+a {
+text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+img{
+display: block;
+}
+.wrapper {
+ margin: 0 auto;
+ text-align: center;
+}
+
+/*やりなおしハンバーガーメニュー*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+  top:0;
+    right: -120%;
+  width:100%;
+    height: 100vh;/*ナビの高さ*/
+  background:white;
+  background-color:rgba(255,255,255,0.9);
+    /*動き*/
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+  list-style: none;
+    text-align: center;
+	border-bottom: solid;
+	color: #005497;
+}
+
+#g-nav li a{
+  color: #005497;
+ 
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size:1em;
+}
+#g-nav li a:hover{
+	opacity: 0.5;
+}
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+  position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+  top:10px;
+  right: 10px;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+  
+/*×に変化*/  
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background-color: #666;
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+  font-size:1.2rem;
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+p{
+  margin-top:20px;  
+}
+
+small{
+  color:#fff;
+  display: block;
+  text-align: center;
+}
+
+#header{
+  width:100%;
+  background:#333;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+}
+
+section{
+  padding:100px 30px;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+#footer{
+  background:#333;
+  padding:20px;
+}
+.pc{
+display: none;
+}
+
+
+
+
+
+
+/*エフェクト*/
+.scroll-up{
+    opacity: 0;
+    transform: translateY(100px)/*スクロールアップする距離*/;
+    transition: all 2s/*処理にかかる時間*/;
+}
+.scroll-up.done, .scroll-fade.done{
+    opacity : 1;
+    transform : translate(0, 0);
+}
+
+/*ヘッダー*/
+header img{
+	padding: 10px;
+}
+
+
+
+
+/*メインビジュアル*/
+
+#vegas{
+width: 90vw;
+height: 75vw;
+margin:0 auto;
+margin-bottom: 50px;
+
+}
+#vegas p {
+    color: white;
+    line-height: 1em;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+#vegas h1{
+	width:71%;
+	color:#FFF;
+	font-family: serif;
+    font-weight: bold;
+	text-decoration: underline;
+}
+.textbox {
+   
+    position: absolute;
+    bottom: 0;
+}
+
+
+/*point*/
+#point{
+background-color: #005497;
+padding: 10px;
+}
+
+#point h3{
+	color:#FFF;
+	padding-bottom: 48px;
+}
+.point {
+display: flex;
+height: 300px;
+padding: 10px;
+margin-bottom: 100px;
+}
+.point p{
+margin-top,bottom: 100px;
+line-height: 2em;
+
+}
+
+.box{
+	
+}
+.whitebox {
+	margin-bottom:20px;
+	background-color:#FFF;
+	
+}
+
+.whitebox img{
+height:200px;
+margin: 0 auto;
+
+}
+
+
+.balloon{
+  position: absolute;
+  padding: 20px;
+  width: 35px;
+  height: 35px;
+ border-radius: 50%;
+ margin-top: -53px;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  background-color: #00abff;
+  margin-left: -5px;
+
+}
+.balloon::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 20px solid #00abff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+ transform: rotate(110deg);
+   bottom: 3px;
+   right: 10px;
+}
+
+.balloon span{
+	font-size:2em;
+	
+}
+.text&img {
+	margin-bottom:10px;
+}
+
+
+.text&img h2{
+	padding-top:10px;
+}
+/*ナベカンのこだわり６ポイント*/
+
+.tags {
+  background: #005497;;
+  color: #fff;
+ height: 70px;
+  line-height: 70px;
+  padding: 0 2em 0 3em;
+ font-size: 1.5em;
+}
+
+.back{
+margin-bottom: 100px;	
+	}
+
+.back p{
+	text-align: left;
+	padding: 10px;
+	background-color:#668CFF3D;
+	line-height:2em;
+}
+
+
+
+
+.button{
+	width: 200px;
+    height: 46px;
+    background-color: #fdfd73;
+    line-height: 46px;
+   border-radius: 28px;
+   margin: 0 auto;
+    box-shadow: 0 5px 0 #cabf1c;
+    
+}
+
+/*"promise*/
+h2{
+padding-top: 20px;
+}
+
+#promise ul{
+counter-reset:number;
+    padding: 0;
+}
+
+
+
+#promise p{
+margin-left: 59px;
+}
+
+
+
+
+/* ラベル部分 左下に表示 */
+.triangle {
+background: #fafafa;
+
+    border: #b0aaab 2px solid;
+   
+    position: relative;
+	
+	margin-bottom:10px;
+}
+
+.triangle p{
+	text-align:left;
+}
+
+
+/* ラベル部分 左上に表示 */
+.triangle::before {
+content: "";
+    top: 0;
+    left: 0;
+    border-bottom: 4em solid transparent;
+    border-left: 4em solid #b0aaab; /* ラベルの色はここで変更 */
+    position: absolute;
+    z-index: 100;
+}
+.triangle::after {
+  content: counter(number);
+    display: block;
+    top: 5px;
+    color: #131212; /* 文字色はここで変更 */
+    left: 8px;
+    position: absolute;
+    z-index: 101;
+	counter-increment:number;
+}
+
+tr{
+line-height: 50px;
+}
+th{
+width: 50px;
+height: 50px;
+}
+
+td{
+padding: 10px;
+padding-left: 47px
+}
+/*テーブルレイアウト*/
+th{
+background-color:  #005497; /* 背景色指定 */
+color:  #fff;               /* 文字色指定 */
+font-weight:  normal;       /* 文字の太さ指定 */
+position:  relative;        /* 位置指定 */
+z-index: 10;                /* 重なり調整 */
+  }
+th::after {
+content:'';                 /* 空の要素を作る */
+position:  absolute;        /* 位置指定 */
+height: 50px;               /* 高さ指定 */
+width: 50px;                /* 幅指定 */
+background-color:  #005497; /* 背景色指定 */
+transform:  rotate(45deg);  /* 要素を回転 */
+top: 10px;                   /* 位置指定 */
+right: -25px;               /* 位置指定 */
+z-index:  -1;               /* 重なり調整 */
+}
+/*"promise*/
+h3{
+text-align: center;
+}
+#promise dd{
+background-color: #8080805e;
+line-height: 2em;
+}
+
+/*おといあわせ*/
+
+
+
+#form ul{
+padding: 0;
+}
+#form li{
+background-color: #005497;
+
+}
+
+#form p{
+color: white;
+padding: 10px;
+}
+
+
+#form img{
+width:50%;
+margin:0 auto;
+}
+
+
+
+#Access li{
+
+line-height: 3em;
+text-align: left;
+}
+
+#Access iframe{
+	margin:0 auto:
+	}
+	iframe{
+width: 90%;
+}
+/*フッター*/
+#nav {
+
+ background-color: #005497;
+ color:#FFF;
+}
+
+
+#nav ul{
+	padding:0;
+}
+#nav li{
+	line-height:35px;
+}
+
+#nav a{
+	color:#FFF;
+}
+
+#nav a:hover{
+	color:#FF9;
+	opacity: 0.5;
+}
+/*ローディング*/
+/* Loading背景画面設定　*/
+#splash {
+/*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:white;
+  text-align:center;
+  color:white;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width:200px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:1.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+
+}
