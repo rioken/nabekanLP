@@ -314,6 +314,8 @@ margin: 0 auto;
 	font-size:2em;
 	line-height: 1em;
 }
+	
+}
 .text&img {
 	margin-bottom:10px;
 }
@@ -340,7 +342,6 @@ margin-bottom: 100px;
 
 .back p{
 	text-align: left;
-	padding: 10px;
 	background-color:#668CFF3D;
 	line-height:2em;
 }
@@ -357,6 +358,13 @@ margin-bottom: 100px;
    margin: 0 auto;
     box-shadow: 0 5px 0 #cabf1c;
     
+}
+.button a{
+	color:black;
+}
+.button :hover{
+
+opacity:0.5;
 }
 
 /*"promise*/
@@ -464,8 +472,16 @@ padding: 0;
 }
 #form li{
 background-color: #005497;
-
+display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
 }
+#form span{
+	color:white;
+	font-size:70px;
+}
+
 
 #form p{
 color: white;

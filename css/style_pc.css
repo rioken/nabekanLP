@@ -153,12 +153,9 @@ top: -60px;
   background: #005497;;
   color: #fff;
   display: inline-block;
-  height: 70px;
-  line-height: 70px;
-  padding: 0 2em 0 3em;
   position: relative;
   float: left;
-  top:-50px;
+  top:-16px;
   left: -41px;
   font-size: 1.5em;
 }
@@ -180,9 +177,12 @@ margin-bottom: 100px;
 
 .back p{
 	text-align: left;
-	padding: 10px 10px 10px 172px;
-	background-color:#668CFF3D;
+    background-color:#668CFF3D;
 	line-height:2em;
+	padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+	padding-top: 70px;
 }
 
 .button{
@@ -194,6 +194,13 @@ margin-bottom: 100px;
    float: right;
     box-shadow: 0 5px 0 #cabf1c;
     
+}
+.button a{
+	color:black;
+}
+.button :hover{
+
+  opacity:0.5;
 }
 /*consept*/
 
@@ -360,10 +367,12 @@ padding: 10px;
 }
 
 
-#form img{
-width:50%;
-margin:0 auto;
+
+#form span{
+	color:white;
+	font-size:70px;
 }
+
 
 #Access ul{
 	display: flex;
@@ -393,6 +402,10 @@ line-height: 50px;
 footer nav a{
 color:#005497; 
 font-weight: bold;
+}
+#nav a:hover{
+	color:#FF9;
+	opacity: 0.5;
 }
 /*ローディング*/
 /* Loading背景画面設定　*/
