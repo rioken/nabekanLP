@@ -64,6 +64,7 @@ display: block;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+	padding: 0;
 }
 
 /*リストのレイアウト設定*/
@@ -330,7 +331,7 @@ margin: 0 auto;
   line-height: 70px;
   padding: 0 2em 0 3em;
  font-size: 1.5em;
-letter-spacing: 10px;
+ letter-spacing: 10px;
 }
 
 .back{
