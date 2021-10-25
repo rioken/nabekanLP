@@ -312,7 +312,7 @@ margin: 0 auto;
 
 .balloon span{
 	font-size:2em;
-	
+	line-height: 1em;
 }
 .text&img {
 	margin-bottom:10px;
